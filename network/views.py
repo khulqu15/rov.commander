@@ -8,7 +8,6 @@ from django.http import JsonResponse
 serial_connection = False
 
 def get_network_interfaces():
-    """Mendapatkan daftar interface jaringan yang tersedia"""
     interfaces = set()
     host_name = socket.gethostname()
     for ip in socket.getaddrinfo(host_name, None):
